@@ -1,6 +1,6 @@
 cabal-version:       2.2
 name:                base-noprelude
-version:             4.17.2.1
+version:             4.18.1.0
 
 synopsis:            "base" package sans "Prelude" module
 homepage:            https://github.com/Holmusk/base-noprelude
@@ -14,7 +14,7 @@ build-type:          Simple
 description:
     This package simplifies defining custom "Prelude"s without having
     to use @-XNoImplicitPrelude@ by re-exporting the full module-hierarchy of
-    the [base-4.17.2.1](https://hackage.haskell.org/package/base-4.17.2.1)
+    the [base-4.18.1.0](https://hackage.haskell.org/package/base-4.18.1.0)
     package /except/ for the "Prelude" module.
     .
     An usage example for such a "Prelude"-replacement is available with
@@ -35,10 +35,10 @@ source-repository head
     location: https://github.com/Holmusk/base-noprelude.git
 
 library
-    build-depends:       base ==4.17.2.1
+    build-depends:       base ==4.18.1.0
     default-language:    Haskell2010
 
-    -- re-exported modules copied from base-4.17.2.1's exposed-modules
+    -- re-exported modules copied from base-4.18.1.0's exposed-modules
     reexported-modules:
       , Control.Applicative
       , Control.Arrow
@@ -65,6 +65,7 @@ library
       , Control.Monad.Zip
       , Data.Array.Byte
       , Data.Bifoldable
+      , Data.Bifoldable1
       , Data.Bifunctor
       , Data.Bitraversable
       , Data.Bits
@@ -78,6 +79,7 @@ library
       , Data.Eq
       , Data.Fixed
       , Data.Foldable
+      , Data.Foldable1
       , Data.Function
       , Data.Functor
       , Data.Functor.Classes
@@ -117,6 +119,7 @@ library
       , Debug.Trace
       , Foreign
       , Foreign.C
+      , Foreign.C.ConstPtr
       , Foreign.C.Error
       , Foreign.C.String
       , Foreign.C.Types
@@ -150,6 +153,7 @@ library
       , GHC.ConsoleHandler
       , GHC.Constants
       , GHC.Desugar
+      , GHC.Encoding.UTF8
       , GHC.Enum
       , GHC.Environment
       , GHC.Err
@@ -169,6 +173,7 @@ library
       , GHC.GHCi
       , GHC.GHCi.Helpers
       , GHC.Generics
+      , GHC.InfoProv
       , GHC.IO
       , GHC.IO.Buffer
       , GHC.IO.BufferedIO
@@ -239,6 +244,7 @@ library
       , GHC.TypeNats.Internal
       , GHC.Unicode
       , GHC.Weak
+      , GHC.Weak.Finalize
       , GHC.Word
       , Numeric
       , Numeric.Natural
